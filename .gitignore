@@ -38,3 +38,7 @@ SEOwnedDE/.vs/SEOwnedDE/v17/.suo
 *.recipe
 *.log
 *.tlog
+*.db-shm
+*.db-wal
+*.ipch
+*.opendb
