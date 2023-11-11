@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+*.vsidx
+SEOwnedDE/.vs/SEOwnedDE/v17/.suo
+*.db
+*.bin
+*.pdb
+*.recipe
+*.log
+*.tlog
