@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{9da8c0d1-7977-452a-929c-deb2626804b3}</ProjectGuid>
+    <RootNamespace>SEOwnedDE</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>-Wno-unused-private-field
+-Wno-unused-function
+-Wno-overloaded-virtual
+-Wno-microsoft-enum-forward-reference
+-Wno-inconsistent-missing-override
+-Wno-microsoft-cast
+-Wno-unused-variable
+-Wno-braced-scalar-init
+-Wno-return-type
+-Wno-pragma-once-outside-header</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <DisableSpecificWarnings>5105;26812</DisableSpecificWarnings>
+      <StringPooling>true</StringPooling>
+      <AdditionalOptions>-Wno-unused-private-field
+-Wno-unused-function
+-Wno-overloaded-virtual
+-Wno-microsoft-enum-forward-reference
+-Wno-inconsistent-missing-override
+-Wno-microsoft-cast
+-Wno-unused-variable
+-Wno-braced-scalar-init
+-Wno-return-type
+-Wno-pragma-once-outside-header</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>-Wno-unused-private-field
+-Wno-unused-function
+-Wno-overloaded-virtual
+-Wno-microsoft-enum-forward-reference
+-Wno-inconsistent-missing-override
+-Wno-microsoft-cast
+-Wno-unused-variable
+-Wno-braced-scalar-init
+-Wno-return-type
+-Wno-pragma-once-outside-header</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <DisableSpecificWarnings>5105;26812</DisableSpecificWarnings>
+      <StringPooling>true</StringPooling>
+      <AdditionalOptions>-Wno-unused-private-field
+-Wno-unused-function
+-Wno-overloaded-virtual
+-Wno-microsoft-enum-forward-reference
+-Wno-inconsistent-missing-override
+-Wno-microsoft-cast
+-Wno-unused-variable
+-Wno-braced-scalar-init
+-Wno-return-type
+-Wno-pragma-once-outside-header</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\App\App.cpp" />
+    <ClCompile Include="src\App\Features\Aimbot\Aimbot.cpp" />
+    <ClCompile Include="src\App\Features\Aimbot\AimbotHitscan\AimbotHitscan.cpp" />
+    <ClCompile Include="src\App\Features\Aimbot\AimbotMelee\AimbotMelee.cpp" />
+    <ClCompile Include="src\App\Features\Aimbot\AimbotProjectile\AimbotProjectile.cpp" />
+    <ClCompile Include="src\App\Features\AimUtils\AimUtils.cpp" />
+    <ClCompile Include="src\App\Features\AutoVaccinator\AutoVaccinator.cpp" />
+    <ClCompile Include="src\App\Features\chat\chat.cpp" />
+    <ClCompile Include="src\App\Features\EnginePrediction\EnginePrediction.cpp" />
+    <ClCompile Include="src\App\Features\ESP\ESP.cpp" />
+    <ClCompile Include="src\App\Features\LagRecords\LagRecords.cpp" />
+    <ClCompile Include="src\App\Features\Materials\Materials.cpp" />
+    <ClCompile Include="src\App\Features\Menu\LateRenderer\LateRenderer.cpp" />
+    <ClCompile Include="src\App\Features\Menu\Menu.cpp" />
+    <ClCompile Include="src\App\Features\MiscVisuals\MiscVisuals.cpp" />
+    <ClCompile Include="src\App\Features\Misc\Misc.cpp" />
+    <ClCompile Include="src\App\Features\MovementSimulation\MovementSimulation.cpp" />
+    <ClCompile Include="src\App\Features\NetworkFix\NetworkFix.cpp" />
+    <ClCompile Include="src\App\Features\Outlines\Outlines.cpp" />
+    <ClCompile Include="src\App\Features\Paint\Paint.cpp" />
+    <ClCompile Include="src\App\Features\Players\Players.cpp" />
+    <ClCompile Include="src\App\Features\ProjectileSimulation\ProjectileSimulation.cpp" />
+    <ClCompile Include="src\App\Features\proj_sim\proj_sim.cpp" />
+    <ClCompile Include="src\App\Features\Radar\Radar.cpp" />
+    <ClCompile Include="src\App\Features\RapidFire\RapidFire.cpp" />
+    <ClCompile Include="src\App\Features\seed_pred\seed_pred.cpp" />
+    <ClCompile Include="src\App\Features\SpectatorList\SpectatorList.cpp" />
+    <ClCompile Include="src\App\Features\SpyCamera\SpyCamera.cpp" />
+    <ClCompile Include="src\App\Features\SpyWarning\SpyWarning.cpp" />
+    <ClCompile Include="src\App\Features\stickyjump\stickyjump.cpp" />
+    <ClCompile Include="src\App\Features\TeamWellBeing\TeamWellBeing.cpp" />
+    <ClCompile Include="src\App\Features\Triggerbot\AutoAirblast\AutoAirblast.cpp" />
+    <ClCompile Include="src\App\Features\Triggerbot\AutoBackstab\AutoBackstab.cpp" />
+    <ClCompile Include="src\App\Features\Triggerbot\AutoDetonate\AutoDetonate.cpp" />
+    <ClCompile Include="src\App\Features\Triggerbot\Triggerbot.cpp" />
+    <ClCompile Include="src\App\Features\VisualUtils\VisualUtils.cpp" />
+    <ClCompile Include="src\App\Features\WorldModulation\WorldModulation.cpp" />
+    <ClCompile Include="src\App\Hooks\CBaseEntity_BaseInterpolatePart1.cpp" />
+    <ClCompile Include="src\App\Hooks\CBaseHudChatLine_InsertAndColorizeText.cpp" />
+    <ClCompile Include="src\App\Hooks\CBasePlayer_CalcPlayerView.cpp" />
+    <ClCompile Include="src\App\Hooks\CClientState_GetTime.cpp" />
+    <ClCompile Include="src\App\Hooks\CClientState_ProcessFixAngle.cpp" />
+    <ClCompile Include="src\App\Hooks\CEconItemSchema_GetItemDefinition.cpp" />
+    <ClCompile Include="src\App\Hooks\CGameEventManager_FireEventIntern.cpp" />
+    <ClCompile Include="src\App\Hooks\CHudTFCrosshair_ShouldDraw.cpp" />
+    <ClCompile Include="src\App\Hooks\ClientModeShared_CreateMove.cpp" />
+    <ClCompile Include="src\App\Hooks\ClientModeShared_DoPostScreenSpaceEffects.cpp" />
+    <ClCompile Include="src\App\Hooks\ClientModeShared_OverrideView.cpp" />
+    <ClCompile Include="src\App\Hooks\CL_CheckForPureServerWhitelist.cpp" />
+    <ClCompile Include="src\App\Hooks\CL_Move.cpp" />
+    <ClCompile Include="src\App\Hooks\CL_SendMove.cpp" />
+    <ClCompile Include="src\App\Hooks\CMaterial_Uncache.cpp" />
+    <ClCompile Include="src\App\Hooks\CMultiPlayerAnimState_ResetGestureSlot.cpp" />
+    <ClCompile Include="src\App\Hooks\CParticleSystemMgr_DrawRenderCache.cpp" />
+    <ClCompile Include="src\App\Hooks\CPrediction_RunCommand.cpp" />
+    <ClCompile Include="src\App\Hooks\CRendering3dView_EnableWorldFog.cpp" />
+    <ClCompile Include="src\App\Hooks\CSequenceTransitioner_CheckForSequenceChange.cpp" />
+    <ClCompile Include="src\App\Hooks\CStudioRender_DrawModelStaticProp.cpp" />
+    <ClCompile Include="src\App\Hooks\CTFGameMovement_PlayerMove.cpp" />
+    <ClCompile Include="src\App\Hooks\CTFGameMovement_ProcessMovement.cpp" />
+    <ClCompile Include="src\App\Hooks\CTFPlayerShared_InCond.cpp" />
+    <ClCompile Include="src\App\Hooks\CTFPlayerShared_IsPlayerDominated.cpp" />
+    <ClCompile Include="src\App\Hooks\CTFPlayer_FireBullet.cpp" />
+    <ClCompile Include="src\App\Hooks\CTFPlayer_MaybeDrawRailgunBeam.cpp" />
+    <ClCompile Include="src\App\Hooks\CTFViewModel_CalcViewModelView.cpp" />
+    <ClCompile Include="src\App\Hooks\CTFWeaponBase_GetShootSound.cpp" />
+    <ClCompile Include="src\App\Hooks\CTFWeaponBase_GetTracerType.cpp" />
+    <ClCompile Include="src\App\Hooks\CUserMessages_DispatchUserMessage.cpp" />
+    <ClCompile Include="src\App\Hooks\CViewRender_PerformScreenOverlay.cpp" />
+    <ClCompile Include="src\App\Hooks\CViewRender_RenderView.cpp" />
+    <ClCompile Include="src\App\Hooks\C_BaseEntity_ResetLatched.cpp" />
+    <ClCompile Include="src\App\Hooks\C_OP_RenderSprites_RenderSpriteCard.cpp" />
+    <ClCompile Include="src\App\Hooks\C_TFWeapon_ShouldDraw.cpp" />
+    <ClCompile Include="src\App\Hooks\C_TFWearable_ShouldDraw.cpp" />
+    <ClCompile Include="src\App\Hooks\CViewRender_DrawViewModels.cpp" />
+    <ClCompile Include="src\App\Hooks\C_BaseAnimating_SetupBones.cpp" />
+    <ClCompile Include="src\App\Hooks\C_BaseEntity_AddVar.cpp" />
+    <ClCompile Include="src\App\Hooks\C_BaseEntity_InterpolateServerEntities.cpp" />
+    <ClCompile Include="src\App\Hooks\C_BaseEntity_SetAbsVelocity.cpp" />
+    <ClCompile Include="src\App\Hooks\C_TFDroppedWeapon.cpp" />
+    <ClCompile Include="src\App\Hooks\C_TFPlayer_AvoidPlayers.cpp" />
+    <ClCompile Include="src\App\Hooks\C_TFPlayer_BRenderAsZombie.cpp" />
+    <ClCompile Include="src\App\Hooks\C_TFPlayer_UpdateClientSideAnimation.cpp" />
+    <ClCompile Include="src\App\Hooks\C_TFRagdoll_CreateTFRagdoll.cpp" />
+    <ClCompile Include="src\App\Hooks\DoEnginePostProcessing.cpp" />
+    <ClCompile Include="src\App\Hooks\FX_FireBullets.cpp" />
+    <ClCompile Include="src\App\Hooks\IBaseClientDLL_FrameStageNotify.cpp" />
+    <ClCompile Include="src\App\Hooks\IBaseClientDLL_LevelInitPostEntity.cpp" />
+    <ClCompile Include="src\App\Hooks\IBaseClientDLL_LevelShutdown.cpp" />
+    <ClCompile Include="src\App\Hooks\IEngineVGuiInternal_Paint.cpp" />
+    <ClCompile Include="src\App\Hooks\IInput_GetUserCmd.cpp" />
+    <ClCompile Include="src\App\Hooks\INetChannel_SendNetMsg.cpp" />
+    <ClCompile Include="src\App\Hooks\ISurface_LockCursor.cpp" />
+    <ClCompile Include="src\App\Hooks\ISurface_OnScreenSizeChanged.cpp" />
+    <ClCompile Include="src\App\Hooks\IVEngineClient013_ClientCmd.cpp" />
+    <ClCompile Include="src\App\Hooks\IVModelRender_DrawModelExecute.cpp" />
+    <ClCompile Include="src\App\Hooks\IVModelRender_ForcedMaterialOverride.cpp" />
+    <ClCompile Include="src\App\Hooks\KeyValues_SetInt.cpp" />
+    <ClCompile Include="src\App\Hooks\R_ComputeLightingOrigin.cpp" />
+    <ClCompile Include="src\App\Hooks\R_LoadSkys.cpp" />
+    <ClCompile Include="src\App\Hooks\WINAPI_WndProc.cpp" />
+    <ClCompile Include="src\DllMain.cpp" />
+    <ClCompile Include="src\SDK\Helpers\Draw\Draw.cpp" />
+    <ClCompile Include="src\SDK\Helpers\Entities\Entities.cpp" />
+    <ClCompile Include="src\SDK\Helpers\Fonts\Fonts.cpp" />
+    <ClCompile Include="src\SDK\Helpers\Input\Input.cpp" />
+    <ClCompile Include="src\SDK\TF2\c_tf_player.cpp" />
+    <ClCompile Include="src\SDK\TF2\keyvalues.cpp" />
+    <ClCompile Include="src\SDK\TF2\MD5.cpp" />
+    <ClCompile Include="src\SDK\TF2\NetVars\NetVars.cpp" />
+    <ClCompile Include="src\Utils\Color\Color.cpp" />
+    <ClCompile Include="src\Utils\HookManager\HookManager.cpp" />
+    <ClCompile Include="src\Utils\HookManager\MinHook\buffer.c" />
+    <ClCompile Include="src\Utils\HookManager\MinHook\hde\hde32.c" />
+    <ClCompile Include="src\Utils\HookManager\MinHook\hde\hde64.c" />
+    <ClCompile Include="src\Utils\HookManager\MinHook\hook.c" />
+    <ClCompile Include="src\Utils\HookManager\MinHook\trampoline.c" />
+    <ClCompile Include="src\Utils\InterfaceManager\InterfaceManager.cpp" />
+    <ClCompile Include="src\Utils\Memory\Memory.cpp" />
+    <ClCompile Include="src\Utils\SignatureManager\SignatureManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\App\App.h" />
+    <ClInclude Include="src\App\Features\Aimbot\Aimbot.h" />
+    <ClInclude Include="src\App\Features\Aimbot\AimbotHitscan\AimbotHitscan.h" />
+    <ClInclude Include="src\App\Features\Aimbot\AimbotMelee\AimbotMelee.h" />
+    <ClInclude Include="src\App\Features\Aimbot\AimbotProjectile\AimbotProjectile.h" />
+    <ClInclude Include="src\App\Features\AimUtils\AimUtils.h" />
+    <ClInclude Include="src\App\Features\AutoVaccinator\AutoVaccinator.h" />
+    <ClInclude Include="src\App\Features\CFG.h" />
+    <ClInclude Include="src\App\Features\EnginePrediction\EnginePrediction.h" />
+    <ClInclude Include="src\App\Features\ESP\ESP.h" />
+    <ClInclude Include="src\App\Features\LagRecords\LagRecords.h" />
+    <ClInclude Include="src\App\Features\Materials\Materials.h" />
+    <ClInclude Include="src\App\Features\Menu\LateRenderer\LateRenderer.h" />
+    <ClInclude Include="src\App\Features\Menu\Menu.h" />
+    <ClInclude Include="src\App\Features\MiscVisuals\MiscVisuals.h" />
+    <ClInclude Include="src\App\Features\Misc\Misc.h" />
+    <ClInclude Include="src\App\Features\MovementSimulation\MovementSimulation.h" />
+    <ClInclude Include="src\App\Features\NetworkFix\NetworkFix.h" />
+    <ClInclude Include="src\App\Features\Outlines\Outlines.h" />
+    <ClInclude Include="src\App\Features\Paint\Paint.h" />
+    <ClInclude Include="src\App\Features\Players\Players.h" />
+    <ClInclude Include="src\App\Features\ProjectileSimulation\ProjectileSimulation.h" />
+    <ClInclude Include="src\App\Features\proj_sim\proj_sim.hpp" />
+    <ClInclude Include="src\App\Features\Radar\Radar.h" />
+    <ClInclude Include="src\App\Features\RapidFire\RapidFire.h" />
+    <ClInclude Include="src\App\Features\seed_pred\seed_pred.hpp" />
+    <ClInclude Include="src\App\Features\SpectatorList\SpectatorList.h" />
+    <ClInclude Include="src\App\Features\SpyCamera\SpyCamera.h" />
+    <ClInclude Include="src\App\Features\SpyWarning\SpyWarning.h" />
+    <ClInclude Include="src\App\Features\stickyjump\stickyjump.hpp" />
+    <ClInclude Include="src\App\Features\TeamWellBeing\TeamWellBeing.h" />
+    <ClInclude Include="src\App\Features\Triggerbot\AutoAirblast\AutoAirblast.h" />
+    <ClInclude Include="src\App\Features\Triggerbot\AutoBackstab\AutoBackstab.h" />
+    <ClInclude Include="src\App\Features\Triggerbot\AutoDetonate\AutoDetonate.h" />
+    <ClInclude Include="src\App\Features\Triggerbot\Triggerbot.h" />
+    <ClInclude Include="src\App\Features\VisualUtils\Icons.h" />
+    <ClInclude Include="src\App\Features\VisualUtils\VisualUtils.h" />
+    <ClInclude Include="src\App\Features\WorldModulation\WorldModulation.h" />
+    <ClInclude Include="src\App\Hooks\WINAPI_WndProc.h" />
+    <ClInclude Include="src\SDK\Helpers\Draw\Draw.h" />
+    <ClInclude Include="src\SDK\Helpers\Entities\Entities.h" />
+    <ClInclude Include="src\SDK\Helpers\Fonts\Fonts.h" />
+    <ClInclude Include="src\SDK\Helpers\Input\Input.h" />
+    <ClInclude Include="src\SDK\SDK.h" />
+    <ClInclude Include="src\SDK\TF2\Activity.h" />
+    <ClInclude Include="src\SDK\TF2\AnalogCode.h" />
+    <ClInclude Include="src\SDK\TF2\basehandle.h" />
+    <ClInclude Include="src\SDK\TF2\basetypes.h" />
+    <ClInclude Include="src\SDK\TF2\bitbuf.h" />
+    <ClInclude Include="src\SDK\TF2\bspflags.h" />
+    <ClInclude Include="src\SDK\TF2\ButtonCode.h" />
+    <ClInclude Include="src\SDK\TF2\cdll_int.h" />
+    <ClInclude Include="src\SDK\TF2\checksum_crc.h" />
+    <ClInclude Include="src\SDK\TF2\client.h" />
+    <ClInclude Include="src\SDK\TF2\clientmode_shared.h" />
+    <ClInclude Include="src\SDK\TF2\client_class.h" />
+    <ClInclude Include="src\SDK\TF2\cmodel.h" />
+    <ClInclude Include="src\SDK\TF2\commonmacros.h" />
+    <ClInclude Include="src\SDK\TF2\const.h" />
+    <ClInclude Include="src\SDK\TF2\convar.h" />
+    <ClInclude Include="src\SDK\TF2\Cursor.h" />
+    <ClInclude Include="src\SDK\TF2\c_baseanimating.h" />
+    <ClInclude Include="src\SDK\TF2\c_basecombatcharacter.h" />
+    <ClInclude Include="src\SDK\TF2\c_basecombatweapon.h" />
+    <ClInclude Include="src\SDK\TF2\c_baseentity.h" />
+    <ClInclude Include="src\SDK\TF2\c_baseflex.h" />
+    <ClInclude Include="src\SDK\TF2\c_baseobject.h" />
+    <ClInclude Include="src\SDK\TF2\c_baseplayer.h" />
+    <ClInclude Include="src\SDK\TF2\c_baseprojectile.h" />
+    <ClInclude Include="src\SDK\TF2\c_playerresource.h" />
+    <ClInclude Include="src\SDK\TF2\c_tf_player.h" />
+    <ClInclude Include="src\SDK\TF2\c_tf_playerresource.h" />
+    <ClInclude Include="src\SDK\TF2\datamap.h" />
+    <ClInclude Include="src\SDK\TF2\deformations.h" />
+    <ClInclude Include="src\SDK\TF2\dt_common.h" />
+    <ClInclude Include="src\SDK\TF2\dt_recv.h" />
+    <ClInclude Include="src\SDK\TF2\GameEventListener.h" />
+    <ClInclude Include="src\SDK\TF2\gametrace.h" />
+    <ClInclude Include="src\SDK\TF2\globalvars_base.h" />
+    <ClInclude Include="src\SDK\TF2\IAppSystem.h" />
+    <ClInclude Include="src\SDK\TF2\icliententity.h" />
+    <ClInclude Include="src\SDK\TF2\icliententitylist.h" />
+    <ClInclude Include="src\SDK\TF2\iclientmode.h" />
+    <ClInclude Include="src\SDK\TF2\iclientnetworkable.h" />
+    <ClInclude Include="src\SDK\TF2\iclientrenderable.h" />
+    <ClInclude Include="src\SDK\TF2\iclientthinkable.h" />
+    <ClInclude Include="src\SDK\TF2\iclientunknown.h" />
+    <ClInclude Include="src\SDK\TF2\IColorCorrection.h" />
+    <ClInclude Include="src\SDK\TF2\iconvar.h" />
+    <ClInclude Include="src\SDK\TF2\icvar.h" />
+    <ClInclude Include="src\SDK\TF2\IEngineTrace.h" />
+    <ClInclude Include="src\SDK\TF2\ienginevgui.h" />
+    <ClInclude Include="src\SDK\TF2\igameevents.h" />
+    <ClInclude Include="src\SDK\TF2\igamemovement.h" />
+    <ClInclude Include="src\SDK\TF2\igameresources.h" />
+    <ClInclude Include="src\SDK\TF2\ihandleentity.h" />
+    <ClInclude Include="src\SDK\TF2\IHTML.h" />
+    <ClInclude Include="src\SDK\TF2\IImage.h" />
+    <ClInclude Include="src\SDK\TF2\iinput.h" />
+    <ClInclude Include="src\SDK\TF2\iinputsystem.h" />
+    <ClInclude Include="src\SDK\TF2\imageformat.h" />
+    <ClInclude Include="src\SDK\TF2\imaterial.h" />
+    <ClInclude Include="src\SDK\TF2\imaterialsystem.h" />
+    <ClInclude Include="src\SDK\TF2\imaterialsystemhardwareconfig.h" />
+    <ClInclude Include="src\SDK\TF2\imaterialvar.h" />
+    <ClInclude Include="src\SDK\TF2\IMatSystemSurface.h" />
+    <ClInclude Include="src\SDK\TF2\imdlcache.h" />
+    <ClInclude Include="src\SDK\TF2\imovehelper.h" />
+    <ClInclude Include="src\SDK\TF2\inetchannel.h" />
+    <ClInclude Include="src\SDK\TF2\inetchannelinfo.h" />
+    <ClInclude Include="src\SDK\TF2\inetmessage.h" />
+    <ClInclude Include="src\SDK\TF2\inetworkmessage.h" />
+    <ClInclude Include="src\SDK\TF2\inetworksystem.h" />
+    <ClInclude Include="src\SDK\TF2\InputEnums.h" />
+    <ClInclude Include="src\SDK\TF2\interface.h" />
+    <ClInclude Include="src\SDK\TF2\iprediction.h" />
+    <ClInclude Include="src\SDK\TF2\ispatialpartition.h" />
+    <ClInclude Include="src\SDK\TF2\isteamcontroller.h" />
+    <ClInclude Include="src\SDK\TF2\istudiorender.h" />
+    <ClInclude Include="src\SDK\TF2\ISurface.h" />
+    <ClInclude Include="src\SDK\TF2\itexture.h" />
+    <ClInclude Include="src\SDK\TF2\itoolentity.h" />
+    <ClInclude Include="src\SDK\TF2\ivdebugoverlay.h" />
+    <ClInclude Include="src\SDK\TF2\IVguiMatInfo.h" />
+    <ClInclude Include="src\SDK\TF2\IVguiMatInfoVar.h" />
+    <ClInclude Include="src\SDK\TF2\iviewrender_beams.h" />
+    <ClInclude Include="src\SDK\TF2\ivmodelinfo.h" />
+    <ClInclude Include="src\SDK\TF2\ivmodelrender.h" />
+    <ClInclude Include="src\SDK\TF2\ivrenderview.h" />
+    <ClInclude Include="src\SDK\TF2\KeyCode.h" />
+    <ClInclude Include="src\SDK\TF2\keyvalues.h" />
+    <ClInclude Include="src\SDK\TF2\lightdesc.h" />
+    <ClInclude Include="src\SDK\TF2\localflexcontroller.h" />
+    <ClInclude Include="src\SDK\TF2\MD5.h" />
+    <ClInclude Include="src\SDK\TF2\modes.h" />
+    <ClInclude Include="src\SDK\TF2\MouseCode.h" />
+    <ClInclude Include="src\SDK\TF2\multiplayer_animstate.h" />
+    <ClInclude Include="src\SDK\TF2\netadr.h" />
+    <ClInclude Include="src\SDK\TF2\netchannel.h" />
+    <ClInclude Include="src\SDK\TF2\netmessages.h" />
+    <ClInclude Include="src\SDK\TF2\NetVars\NetVars.h" />
+    <ClInclude Include="src\SDK\TF2\prediction.h" />
+    <ClInclude Include="src\SDK\TF2\random.h" />
+    <ClInclude Include="src\SDK\TF2\refcount.h" />
+    <ClInclude Include="src\SDK\TF2\shareddefs.h" />
+    <ClInclude Include="src\SDK\TF2\Signatures.h" />
+    <ClInclude Include="src\SDK\TF2\string_t.h" />
+    <ClInclude Include="src\SDK\TF2\studio.h" />
+    <ClInclude Include="src\SDK\TF2\texture_group_names.h" />
+    <ClInclude Include="src\SDK\TF2\tf_shareddefs.h" />
+    <ClInclude Include="src\SDK\TF2\tf_weaponbase.h" />
+    <ClInclude Include="src\SDK\TF2\trace.h" />
+    <ClInclude Include="src\SDK\TF2\usercmd.h" />
+    <ClInclude Include="src\SDK\TF2\utlvector.h" />
+    <ClInclude Include="src\SDK\TF2\vcollide.h" />
+    <ClInclude Include="src\SDK\TF2\VGUI.h" />
+    <ClInclude Include="src\SDK\TF2\view_shared.h" />
+    <ClInclude Include="src\SDK\TF2\vphysics.h" />
+    <ClInclude Include="src\SDK\TF2\vplane.h" />
+    <ClInclude Include="src\SDK\TF2\vtf.h" />
+    <ClInclude Include="src\Utils\Assert\Assert.h" />
+    <ClInclude Include="src\Utils\Color\Color.h" />
+    <ClInclude Include="src\Utils\Config\Config.h" />
+    <ClInclude Include="src\Utils\Config\json.hpp" />
+    <ClInclude Include="src\Utils\Hash\Hash.h" />
+    <ClInclude Include="src\Utils\HookManager\HookManager.h" />
+    <ClInclude Include="src\Utils\HookManager\MinHook\buffer.h" />
+    <ClInclude Include="src\Utils\HookManager\MinHook\hde\hde32.h" />
+    <ClInclude Include="src\Utils\HookManager\MinHook\hde\hde64.h" />
+    <ClInclude Include="src\Utils\HookManager\MinHook\hde\pstdint.h" />
+    <ClInclude Include="src\Utils\HookManager\MinHook\hde\table32.h" />
+    <ClInclude Include="src\Utils\HookManager\MinHook\hde\table64.h" />
+    <ClInclude Include="src\Utils\HookManager\MinHook\MinHook.h" />
+    <ClInclude Include="src\Utils\HookManager\MinHook\trampoline.h" />
+    <ClInclude Include="src\Utils\InterfaceManager\InterfaceManager.h" />
+    <ClInclude Include="src\Utils\Math\Math.h" />
+    <ClInclude Include="src\Utils\Memory\Memory.h" />
+    <ClInclude Include="src\Utils\SignatureManager\SignatureManager.h" />
+    <ClInclude Include="src\Utils\Singleton\Singleton.h" />
+    <ClInclude Include="src\Utils\Utils.h" />
+    <ClInclude Include="src\Utils\Vector\Vector.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
